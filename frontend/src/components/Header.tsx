@@ -1,4 +1,4 @@
-import React from "react"
+
 import { Button } from "@/components/ui/button"
 import logo from "@/assets/img/Logo.png"
 
@@ -13,10 +13,10 @@ const Header = () => {
 
 
         <nav className="flex items-center gap-15 text-white font-medium">
-          <a href="/about" className="hover:underline">About Us</a>
-          <a href="/waitlist" className="hover:underline">Waitlist</a>
-          <a href="/cart" className="hover:underline">Cart</a>
-          <a href="/buy">
+          <a href="/" className="hover:underline">About Us</a>
+          <a href="/" className="hover:underline">Waitlist</a>
+          <a href="/checkout" className="hover:underline">Cart</a>
+          <a href="/">
             <Button className="bg-white text-black hover:bg-gray-200">Buy</Button>
           </a>
         </nav>
