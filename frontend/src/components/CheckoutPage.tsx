@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import { ArrowLeft } from 'lucide-react';
 import AddressForm from './AddressForm';
 import OrderSummary from './OrderSummary';
+import { useNavigate } from 'react-router-dom';
+
 
 const CheckoutPage: React.FC = () => {
+  const navigate = useNavigate();
   const [showMobileForm, setShowMobileForm] = useState(false);
 
   const orderItems = [
@@ -32,6 +35,8 @@ const CheckoutPage: React.FC = () => {
 
       console.log('Navigate back');
     }
+
+    navigate('/');
   };
 
   return (

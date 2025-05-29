@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
 import { toast } from 'sonner';
+import { useNavigate } from 'react-router-dom';
 
 interface ProductDetailsProps {
   name: string;
@@ -13,33 +14,44 @@ interface ProductDetailsProps {
 }
 
 const ProductDetails = ({ name, description, price, currency, sizes }: ProductDetailsProps) => {
+  const navigate = useNavigate();
   const [selectedSize, setSelectedSize] = useState<string>('');
 
   const handleAddToCart = () => {
-    if (!selectedSize) {
-      toast.error("Please select a size", {
-        description: "Choose your preferred size before adding to cart.",
-      });
-      return;
-    }
-
-    toast.success("Added to Cart!", {
-      description: `${name} (Size: ${selectedSize}) has been added to your cart.`,
+  if (!selectedSize) {
+    toast.error("Please select a size", {
+      description: "Choose your preferred size before adding to cart.",
     });
-  };
+    return;
+  }
+
+  toast.success("Added to Cart!", {
+    description: `${name} (Size: ${selectedSize}) has been added to your cart.`,
+  });
+
+  setTimeout(() => {
+    navigate('/checkout');
+  }, 1500);
+};
+
 
   const handleBuyNow = () => {
-    if (!selectedSize) {
-      toast.error("Please select a size", {
-        description: "Choose your preferred size before purchasing.",
-      });
-      return;
-    }
-
-    toast.success("Redirecting to Checkout", {
-      description: `Processing purchase for ${name} (Size: ${selectedSize}).`,
+  if (!selectedSize) {
+    toast.error("Please select a size", {
+      description: "Choose your preferred size before purchasing.",
     });
-  };
+    return;
+  }
+
+  toast.success("Redirecting to Checkout", {
+    description: `Processing purchase for ${name} (Size: ${selectedSize}).`,
+  });
+
+  setTimeout(() => {
+    navigate('/checkout');
+  }, 1500); // 1.5 seconds delay to allow toast to show
+};
+
 
   return (
     <div className="space-y-6">

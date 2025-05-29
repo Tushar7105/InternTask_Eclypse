@@ -16,7 +16,7 @@ const Header = () => {
           <a href="/" className="hover:underline">About Us</a>
           <a href="/" className="hover:underline">Waitlist</a>
           <a href="/checkout" className="hover:underline">Cart</a>
-          <a href="/">
+          <a href="/checkout">
             <Button className="bg-white text-black hover:bg-gray-200">Buy</Button>
           </a>
         </nav>
