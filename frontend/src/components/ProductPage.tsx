@@ -1,7 +1,5 @@
-import React from 'react';
 import ProductImageGallery from './ProductImageGallery';
 import ProductDetails from './ProductDetails';
-import vid from "@/assets/img/ProductVideo.mp4";
 import img1 from "@/assets/img/Eclypse/Frame 15.png"
 import img2 from "@/assets/img/Eclypse/Frame 15-2.png"
 import img3 from "@/assets/img/Eclypse/Frame 15-1.png"

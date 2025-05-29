@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { cn } from '@/lib/utils';
 import vid from "@/assets/img/ProductVideo.mp4";
 interface ProductImageGalleryProps {

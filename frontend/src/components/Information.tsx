@@ -1,8 +1,8 @@
-import { useState } from "react";
+
 import CollapsibleSection from "./Collapsible";
 
 function Information() {
-  const [dummyData, setDummyData] = useState([
+  const dummyData = [
     {
       title: "Size & Fit",
       children: "Some content to be shown here",
@@ -15,7 +15,8 @@ function Information() {
       title: "How It Was Made",
       children: "Some content to be shown here",
     },
-  ]);
+  ];
+
 
   return (
     <div>

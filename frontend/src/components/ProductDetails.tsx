@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
@@ -22,7 +22,7 @@ const ProductDetails = ({ name, description, price, currency, sizes }: ProductDe
       });
       return;
     }
-    
+
     toast.success("Added to Cart!", {
       description: `${name} (Size: ${selectedSize}) has been added to your cart.`,
     });
@@ -35,7 +35,7 @@ const ProductDetails = ({ name, description, price, currency, sizes }: ProductDe
       });
       return;
     }
-    
+
     toast.success("Redirecting to Checkout", {
       description: `Processing purchase for ${name} (Size: ${selectedSize}).`,
     });
@@ -73,7 +73,7 @@ const ProductDetails = ({ name, description, price, currency, sizes }: ProductDe
             Size chart
           </button>
         </div>
-        
+
         <div className="grid grid-cols-5 gap-2">
           {sizes.map((size) => (
             <button
@@ -100,7 +100,7 @@ const ProductDetails = ({ name, description, price, currency, sizes }: ProductDe
         >
           Buy
         </Button>
-        
+
         <Button
           onClick={handleAddToCart}
           variant="outline"
